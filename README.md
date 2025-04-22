@@ -5,7 +5,7 @@ Transcendence is a real-time, fullstack multiplayer Pong game built as part of t
 This project was designed as a Single Page Application (SPA) with a focus on responsive UI, performance, and scalable backend architecture.
 
 
-🧩 Features
+🧩 **Features**
 
 
 🔐 User Authentication
