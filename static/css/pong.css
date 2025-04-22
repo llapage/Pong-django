@@ -1,0 +1,77 @@
+#game-container {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 1fr auto 1fr;
+    gap: 10px; /* Space between grid elements */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#canvas-wrapper {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-width: 500px; /* Ensures it doesn't shrink too much */
+    min-height: 400px; /* Set a reasonable minimum height */
+    overflow: hidden;
+}
+
+/* Ensure the canvas resizes but maintains a good size */
+#pong {
+    width: 100%; /* Allows it to grow with the container */
+    height: auto; /* Keeps aspect ratio */
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 500px; /* Prevents excessive shrinking */
+    min-height: 400px;
+    display: block;
+}
+
+
+/* Player Labels */
+.player-label {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+	justify-self: center; /* Centers the entire label in the grid */
+    align-self: center;   /* Aligns the label vertically */
+    min-width: 100px; 
+}
+
+/* Score Styling */
+.player-score {
+    font-size: 14px;
+    color: yellow;
+    margin-top: 4px;
+    font-weight: bold;
+}
+
+/* Assign grid positions */
+#player-top {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#player-bottom {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+#player-left {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#player-right {
+    grid-column: 3;
+    grid-row: 2;
+}

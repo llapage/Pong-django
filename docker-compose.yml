@@ -1,0 +1,71 @@
+services:
+
+  django:
+    build:
+      context: ./django
+    container_name: django
+    volumes:
+      - ./django:/usr/src/app
+      - socket_sql:/var/run/postgresql
+    depends_on:
+      - postgres
+    expose:
+      - "8000"
+    env_file:
+      - ./.env/dev.env
+    environment:
+      - NEW_HOST=${HOST_IP}
+    networks:
+      - transcendence
+
+  nginx:
+    build:
+      context: ./nginx
+    container_name: nginx
+    ports:
+      - "8443:443"
+    volumes:
+      - ./static:/static
+      - ./django:/app/django
+      - ./django/media:/app/media
+    networks:
+      - transcendence
+    depends_on:
+      - django
+
+  postgres:
+    container_name: postgres
+    build:
+      context: ./psql
+    expose:
+      - "5432"
+    env_file:
+      - ./.env/dev.env
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - socket_sql:/var/run/postgresql
+    networks:
+      - transcendence
+    restart: always
+  
+  redis:
+    container_name: redis
+    image: "redis:alpine"
+    expose:
+      - "6379"
+    depends_on:
+      - django
+    networks:
+      - transcendence
+
+networks:
+  transcendence:
+    driver: bridge
+
+volumes:
+  data:
+  static:
+  pgdata:
+  socket_sql:
+  
+

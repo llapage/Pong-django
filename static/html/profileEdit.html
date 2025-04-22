@@ -1,0 +1,111 @@
+<!--    django/userManagementApp/views.py
+        static/js/profilePage.js
+-->
+<div class="d-flex align-items-center p-3 border rounded">
+    <img id="profilePic" src="/media/profile_pictures/default_cute.png" class="rounded-circle me-3" style="width: 60px">
+    <div class="row g-2" id="profile-display">
+      <div class="col-md-6">
+        <strong>Id:</strong> <span class="display" name="id" id="id">Loading...</span>
+      </div>
+      <div class="col-md-6">
+        <strong>Username:</strong> <span class="display" name="username">Loading...</span>
+      </div>
+      <div class="col-md-6">
+        <strong>Email:</strong> <span class="display" name="email">Loading...</span>
+      </div>
+      <div class="col-md-6">
+        <strong>Nickname:</strong> <span class="display" name="nickname">Loading...</span>
+      </div>
+      <div class="col-md-4">
+        <strong>Wins:</strong> <span class="display" name="wins">Loading...</span>
+      </div>
+      <div class="col-md-4">
+        <strong>Losses:</strong> <span class="display" name="losses">Loading...</span>
+      </div>
+      <div class="col-md-4">
+        <strong>Ratio:</strong> <span class="display" name="ratio">Loading...</span>
+      </div>
+    </div>
+  </div>
+    
+    
+    <!--User profile edit view. Insert ONLY PlayerProfile modifyable variabes-->
+    <div id="profile-edit" hidden>
+        <div class="mb-3">
+            <label class="form-label">
+                Username
+                <input type="text" class="form-control" name="username">
+                <p class="form-error-msg"></p>
+            </label>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">
+                Nickname
+              <input type="text" class="form-control" name="nickname">
+              <p class="form-error-msg"></p>
+            </label>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">
+                Email
+              <input type="text" class="form-control" name="email">
+              <p class="form-error-msg"></p>
+            </label>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">
+              Password
+            <input type="password" class="form-control" name="password">
+            <p class="form-error-msg"></p>
+          </label>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">
+              Password Confirmation
+            <input type="password" class="form-control" name="password confirmation">
+            <p class="form-error-msg"></p>
+          </label>
+          <div id="passwordHelpBlock" class="form-text">
+            Your password must be 
+            - at least 8 characters
+            - must contain at least 1 uppercase letter, 1 lowercase letter, and 1 number
+        </div>
+        </div>
+        <div class="my-3">
+          <button class="btn btn-primary uploadProfilePic" onclick="document.getElementById('profilePicInput').click()">Upload Profile Picture</button>
+          <input class="btn btn-primary uploadProfilePic" type="file" id="profilePicInput" style="display:none">
+          <button class="btn btn-primary deleteProfilePic">Delete Profile Picture</button>
+          <div id="imgHelpBlock" class="form-text">
+            Accepted file types: JPG, PNG, GIF
+          </div>
+        </div>
+        <div class="my-10">
+          <button class="btn btn-primary save">Save Profile</button>
+          <button class="btn btn-primary switchDisplay">Cancel</button>
+        </div>
+    </div>
+    
+    
+    
+    
+<button class="btn btn-primary switchEdit" id="profile-edit-btn">Edit Profile</button>
+
+    
+<div class="container social" id="friendRequests">
+    <!--Contains all incoming friend requests-->
+</div>
+<div class="container" id="profileFriendsList">
+  <!--Contains friends list-->
+</div>
+<div class="container" id="gameHistoryList">
+  <!--Contains games history list-->
+</div>
+
+<div class="container" id="blockedUsersList">
+  <!--Contains blocked users list-->
+</div>
+
+<script src="/static/js/profilePage.js" type="text/javascript"></script>
+<script src="/static/js/profileEdit.js" type="text/javascript"></script>
+<p></p>
+<button type="button" class="btn btn-primary logout">Logout</button>

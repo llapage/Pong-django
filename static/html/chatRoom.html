@@ -1,0 +1,24 @@
+<div class="chat-names">
+    <a id="chat-name" href="" style="text-decoration: none;"></a>
+    <a id="chat-name-2" href="" style="text-decoration: none;"></a>
+</div>
+<div class="container">
+    <div id="chat-log" style="min-height: 400px;"></div>
+</div>
+<input class="textInput" id="chat-message-input" type="text" size="100">
+<input class="button" id="chat-message-submit" type="button" value="Send">
+
+<div class="ui" id="state1">
+    <input class="button" id="chat-play-button" type="button" value="▶️ Play">
+</div>
+<div class="ui" id="state2" hidden>
+    waiting for opponent...
+    <input class="button" id="chat-cancel-button" type="button" value="Cancel">
+</div>
+<div class="ui" id="state3" hidden>
+    Your opponent want to play 
+    <input class="button" id="chat-accept-button" type="button" value="Accept">
+    <input class="button" id="chat-decline-button" type="button" value="Decline">
+</div>
+
+<script src="/static/js/chatRoom.js" type="text/javascript"></script>

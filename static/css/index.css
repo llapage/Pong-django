@@ -1,0 +1,140 @@
+/* Make sure the body and html take up the full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    background-image: url('https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); /* Add the image URL here */
+    background-size: cover; /* Make the background image cover the entire page */
+    background-position: center center; /* Center the image */
+    background-attachment: fixed; /* Keep the background fixed when scrolling */
+}
+
+
+/* Use flexbox to center the content */
+body {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+    background-color: #f8f9fa; /* Optional background color */
+    flex-direction: column;   /* Allow vertical stacking of content */
+}
+
+/* Ensure the card takes the full width but doesn't overflow */
+.card {
+    width: 100%;
+    max-width: 600px; /* Optional max width for the card */
+}
+
+dialog {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    z-index: 9999;
+    border: none;
+}
+
+.form-control { 
+    border: 2px solid rgb(162, 162, 162);
+}
+
+.input-error {
+    border: 2px solid rgb(203, 44, 44);
+}
+
+.form-error-msg {
+    color: rgb(203, 44, 44);
+    display: none;
+}
+
+.image-type-info {
+    color: rgb(203, 44, 44);
+}
+
+.chat-names {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+#chat-name-2 {
+    color: #034a96;
+  }
+
+#chat-log {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    padding: 15px;
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.message {
+    max-width: 60%;
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-size: 14px;
+    word-wrap: break-word;
+}
+
+.message.user {
+    align-self: flex-end;
+    background-color: #007bff;
+    color: white;
+    text-align: right;
+}
+
+.message.receiver {
+    align-self: flex-start;
+    background-color: #e0e0e0;
+    color: black;
+    text-align: left;
+}
+
+.textInput {
+    width: 95%;
+    margin: 0 auto;
+    /* max-width: 400px; */
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.textInput:focus {
+    border-color: #007bff;
+}
+
+.button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background: #0056b3;
+}
+
+.matchmaking-button > div {
+    border: 2px solid #d3d3d3; /* Bordure grise claire */
+    background-color: #f9f9f9; /* Fond légèrement coloré */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 15px; /* Espacement interne */
+    margin: 10px 0; /* Espacement entre les div */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+}

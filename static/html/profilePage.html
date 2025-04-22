@@ -1,0 +1,33 @@
+<!--    django/userManagementApp/views.py
+        static/js/profilePage.js
+-->
+
+<!--User profile values display view. Insert ALL PlayerProfile variables-->
+<div id="profile-display" class="d-flex align-items-center p-3 border rounded">
+    <img id="profilePic" src="/media/profile_pictures/default_cute.png" class="rounded-circle me-3" style="width: 60px">
+    <div class="row g-2">
+      <div class="col-md-8">
+        <strong>Nickname:</strong> <span class="display" name="nickname">Loading...</span>
+      </div>
+      <div class="col-md-6">
+        <strong>Wins:</strong> <span class="display" name="wins">Loading...</span>
+      </div>
+      <div class="col-md-6">
+        <strong>Losses:</strong> <span class="display" name="losses">Loading...</span>
+      </div>
+      <div class="col-md-6">
+        <strong>Ratio:</strong> <span class="display" name="ratio">Loading...</span>
+      </div>
+    </div>
+  </div>
+  
+<div id="social_buttons">
+  <!--Contains add friend / remove friend & block user / unblock user buttons-->
+</div>
+
+<div class="row" id="gameHistoryList">
+  <!--Contains games history list-->
+</div>
+
+<script src="/static/js/profilePage.js" type="text/javascript"></script>
+
