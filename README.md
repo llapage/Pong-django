@@ -6,6 +6,8 @@ This project was designed as a Single Page Application (SPA) with a focus on res
 
 
 🧩 Features
+
+
 🔐 User Authentication
 
 🗨️ Live Chat System
